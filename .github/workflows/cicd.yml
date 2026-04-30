@@ -50,6 +50,8 @@ jobs:
           cache: 'maven'
 
       - name: Build with Maven
+      # working-directory를 추가해서 pom.xml이 있는 하위 폴더로 이동시켜줘!
+        working-directory: ./cicd-basic-lab
         run: mvn clean package -DskipTests
 
       # [인증 가이드] 
